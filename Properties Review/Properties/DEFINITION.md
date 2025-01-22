@@ -72,10 +72,15 @@ public Type PropertyName
 ---
 
 [auto-implementation](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
-: Auto implemented properties have the compiler create the private attribute automatically. However, with this approach, **you cannot have data verification on the value**.
+: Auto implemented properties have the compiler create the private attribute automatically. However, with this approach, **you cannot have data verification on the value**. ***Auto implemented properties must have a `get` accessor***.
 
 ```cs
 public Type PropertyName { get; set; }
+```
+
+auto-implemented properties can also be initialized, similar to a variable:
+```cs
+public string ExampleDefault { get; set; } = "This is my default string";
 ```
 
 ---
