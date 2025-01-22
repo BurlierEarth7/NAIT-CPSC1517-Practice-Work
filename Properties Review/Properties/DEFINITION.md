@@ -161,7 +161,7 @@ Instead of:
     {
         // Expression bodied members use => to assign or return the result of an expression
 
-        // An experssion bodied member returning a value
+        // An expression bodied member returning a value
         // Equivalent to { return _IsValid; }
         get => _IsValid;
         // An expression bodied member assigning a value
