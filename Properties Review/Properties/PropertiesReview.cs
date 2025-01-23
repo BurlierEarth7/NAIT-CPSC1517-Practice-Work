@@ -10,8 +10,8 @@ public class PropertiesReview
     #endregion AutoImplemented
 
 
-    #region ManuallyImplemented
-    // Write a manually-implemented string property named "LastName". Make it read and write accessible
+    #region FullyImplemented
+    // Write a fully-implemented string property named "LastName". Make it read and write accessible
     // Use a private variable named _LastName to manage your data
     // Add verification to make sure that it is not null or whitespace
     // If the given value is null, or whitespace, throw an ArgumentNullException
@@ -22,6 +22,8 @@ public class PropertiesReview
         get => _LastName;
         set {
             if (string.IsNullOrWhiteSpace(value)) throw new ArgumentNullException();
+            //We always trim our data as there is a risk that it was not done when the data was entered by the user
+            //or that extra whitespace was added somewhere along the line.
             _LastName = value.Trim();
         }
     }
