@@ -18,6 +18,7 @@ public class PropertiesReview_Should
     public void FirstName_Should_Default_Rebecca()
     {
         // Given
+        //Target-typed new (Just using new() instead of new class() is only available in .net 9 and we're still technically in 8 for this course)
         PropertiesReview sut = new PropertiesReview();
         // When
         string expectedDefault = "Rebecca";
