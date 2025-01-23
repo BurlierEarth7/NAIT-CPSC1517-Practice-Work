@@ -85,8 +85,8 @@ public string ExampleDefault { get; set; } = "This is my default string";
 
 ---
 
-manual-implementation
-: Manually implemented properties take more time to write, but **allow for data verification on the value**
+full-implementation
+: fully implemented properties take more time to write, but **allow for data verification on the value**
 ```cs
 public Type PropertyName
 {
@@ -132,12 +132,12 @@ Instead of:
     // This is because our property is auto-implemented
 ```
 
-### Manual Implementation
+### Fully Implemented
 
 ```cs
     private string _Name = "No Name";
     /// <summary>
-    /// An example of manually implemented property with data verification
+    /// An example of fully implemented property with data verification
     /// </summary>
     /// <value>A non-null and non-whitespace string</value>
     public string Name
@@ -159,7 +159,7 @@ Instead of:
 ```cs
     private bool _IsValid;
     /// <summary>
-    /// A manually implemented property with expression-bodied accessors
+    /// A fully implemented property with expression-bodied accessors
     /// </summary>
     /// <value>True or False</value>
     public bool IsValid

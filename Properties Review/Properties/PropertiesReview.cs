@@ -27,5 +27,5 @@ public class PropertiesReview
             _LastName = value.Trim();
         }
     }
-        #endregion ManuallyImplemented
+        #endregion FullyImplemented
     }

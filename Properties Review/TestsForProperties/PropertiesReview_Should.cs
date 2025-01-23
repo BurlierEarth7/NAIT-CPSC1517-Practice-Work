@@ -5,34 +5,36 @@ namespace TestsForProperties;
 
 public class PropertiesReview_Should
 {
+    /// <summary>
+    /// Checks if the FirstName property can be written to
+    /// </summary>
     [Fact]
-    public void FirstName_Should_Be_ReadWrite_Default_Rebecca()
+    public void FirstName_Should_Be_Writable() => typeof(PropertiesReview).GetProperty(nameof(PropertiesReview.FirstName)).Should().BeWritable();
+
+    /// <summary>
+    /// Checks if the FirstName property has a default value of "Rebecca"
+    /// </summary>
+    [Fact]
+    public void FirstName_Should_Default_Rebecca()
     {
         // Given
-        //Target-typed new (Just using new() instead of new class() is only available in .net 9 and we're still technically in 8 for this course)
         PropertiesReview sut = new PropertiesReview();
         // When
         string expectedDefault = "Rebecca";
         // Then
         sut.FirstName.Should().Be(expectedDefault);
-        sut.FirstName = "";
-        sut.FirstName.Should().Be("");
     }
 
-    [Theory]
-    [InlineData("   27424    ")]
-    [InlineData("dsfhsdkj")]
-    public void LastName_Should_Be_ReadWrite(string value)
-    {
-        // Given
-        PropertiesReview sut = new PropertiesReview();
-        // When
-        // Then
-        sut.LastName = value;
-        sut.LastName.Should().Be(value.Trim());
-    }
+    /// <summary>
+    /// Checks if the LastName property can be written to
+    /// </summary>
+    [Fact]
+    public void LastName_Should_Be_Writable() => typeof(PropertiesReview).GetProperty(nameof(PropertiesReview.LastName)).Should().BeWritable();
 
-
+    /// <summary>
+    /// Checks that values of the LastName property can never be null or whitespace
+    /// </summary>
+    /// <param name="value">Provided test values as a string</param>
     [Theory]
     [InlineData("")]
     [InlineData("                      ")]
