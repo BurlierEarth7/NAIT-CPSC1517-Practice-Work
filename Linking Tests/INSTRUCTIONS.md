@@ -5,15 +5,15 @@
 ### Visual Studio
 
 1. Open your Solution with Visual Studio (Or create a new project)
-   
- ![Left Click on "Open a project or solution"](./images/open-solution.png)
+
+![Left Click on "Open a project or solution"](./images/open-solution.png)
 
 2. With your solution open, select `Project > Manage NuGet Packages`
-   
+
 ![Left Click on "Manage Nuget Packages..."](./images/manage-packages.png)
 
 3. In the NuGet Package Manager, select the `Browse` tab, and search for `FluentAssertions`
-   
+
 ![Search "Fluent Assertions"](./images/fluent-assertions.png)
 
 4. Select the desired `Version` of `FluentAssertions` and install it into your `xUnit Tests`
