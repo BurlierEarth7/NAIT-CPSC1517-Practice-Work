@@ -9,7 +9,8 @@ public class PropertiesReview_Should
     public void FirstName_Should_Be_ReadWrite_Default_Rebecca()
     {
         // Given
-        PropertiesReview sut = new();
+        //Target-typed new (Just using new() instead of new class() is only available in .net 9 and we're still technically in 8 for this course)
+        PropertiesReview sut = new PropertiesReview();
         // When
         string expectedDefault = "Rebecca";
         // Then
@@ -24,7 +25,7 @@ public class PropertiesReview_Should
     public void LastName_Should_Be_ReadWrite(string value)
     {
         // Given
-        PropertiesReview sut = new();
+        PropertiesReview sut = new PropertiesReview();
         // When
         // Then
         sut.LastName = value;
@@ -39,7 +40,7 @@ public class PropertiesReview_Should
     public void LastName_Should_Not_Be_NullOrWhitespace(string? value)
     {
         // Given
-        PropertiesReview sut = new();
+        PropertiesReview sut = new PropertiesReview();
         // When
         Action action = () => sut.LastName = value;
         // Then
