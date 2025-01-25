@@ -72,3 +72,20 @@
 4. Select your Project in the `Command Palette`
 
 ## Testing your project
+
+### Running your Tests in Visual Studio
+
+1. Select `Test` and choose how to run your test
+
+![](./images/test-vs.PNG)
+
+2. For more information, open your Test Explorer under `Test > Test Explorer` or with `Ctrl + E, T`
+
+### Running your Tests in Visual Studio Code
+
+1. Open your `Testing` Tab
+
+![](./images/test-tab-vsc.png)
+
+2. Refresh your tests to make them show up by pressing the refresh button at the top of the `Testing` tab, or press `Ctrl + ;, Ctrl + R`
+3. Run your tests with the run tests button at the top of the `Testing` tab, or press `Ctrl + ;, A` (You can debug them with the debug button or `Ctrl + ;, Ctrl + A`)
