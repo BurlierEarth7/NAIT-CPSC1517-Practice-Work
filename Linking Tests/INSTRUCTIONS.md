@@ -97,3 +97,26 @@
 A circular dependency is when one or more files have each other as project references.
 
 This can be solved by removing the unnecessary project dependencies (e.g. your non-test project having a dependency on your unit tests)
+
+## Removing Project References
+
+### Removing References in Visual Studio
+
+1. In your `Solution Explorer`, Right Click on the project you wish to remove a reference from.
+2. In the context menu, select `Remove Unused Dependencies`.
+3. A menu should show up, allowing you to view which dependencies are unused, and will allow you to choose to keep or remove them. Once you have selected the dependencies you wish to remove, select `Apply`.
+
+![](./images/remove.png)
+
+4. A prompt confirming this action should be presented, and will warn you that `You cannot undo this action`. Select `Yes` to remove the selected dependencies.
+
+### Removing References in Visual Studio Code
+
+1. Visual Studio Code does not include a reference manager, unlike Visual Studio. To remove a reference, open a new `Terminal` with ``Ctrl + Shift + ` ``
+2. In your `Terminal`, use the [dotnet remove reference](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-remove-reference) command to remove your reference
+
+This command will remove a reference to the UnitTestsLinkingTests project from the LinkingTests project:
+
+```cs
+dotnet remove LinkingTests/LinkingTests.csproj reference UnitTestsLinkingTests/UnitTestsLinkingTests.csproj
+```
