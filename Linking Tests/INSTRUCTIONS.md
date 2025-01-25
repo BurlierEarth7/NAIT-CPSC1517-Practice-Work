@@ -89,3 +89,11 @@
 
 2. Refresh your tests to make them show up by pressing the refresh button at the top of the `Testing` tab, or press `Ctrl + ;, Ctrl + R`
 3. Run your tests with the run tests button at the top of the `Testing` tab, or press `Ctrl + ;, A` (You can debug them with the debug button or `Ctrl + ;, Ctrl + A`)
+
+## Common Errors
+
+### Circular Dependencies
+
+A circular dependency is when one or more files have each other as project references.
+
+This can be solved by removing the unnecessary project dependencies (e.g. your non-test project having a dependency on your unit tests)
