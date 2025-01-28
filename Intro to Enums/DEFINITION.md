@@ -134,3 +134,16 @@ Console.WriteLine(p.HasFlag(Permissions.Read)); // Output : True
 
 p = p & ~Permissions.Read; // Permissions equal Permissions AND NOT Read
 Console.WriteLine(p.HasFlag(Permissions.Read)); // Output: False
+```
+
+## Flag Analogy
+
+Flag Enums are like a collection of paint. Each color can be combined with the other colors to represent a combination of ideas.
+
+For example: if you mixed blue and red together, you would have purple. This is an entirely new concept, but is also a sum of it's parts. You cannot have purple without blue AND red, but you can have blue OR red. Purple can then be combined with other colors, like white, creating a light-purple.
+
+Unlike paint however, flags can be changed at will, and parts of it can be removed. once you mix red and blue, you have purple. With flags however, you could take red out, and be left with blue, or vice versa.
+
+In a more technical perspective, a file could be readable, or writable. instead of having to define a new type for both, you could combine them together to create read and write.
+
+Some other real world examples could be if a player in a video game has passed a certain part of the game: When a player presses a button on the map, it causes a door in a different room to open. How do we check if this button has been pressed when that room is not loaded in? We can check if the flag for that button is set, and if it is, have the door open when the room loads.
