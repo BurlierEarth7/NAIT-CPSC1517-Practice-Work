@@ -28,5 +28,5 @@ public class Enumerables_Should
     public void Autumn_Equals_2() => Seasons.Autumn.Should().HaveValue(2);
 
     [Fact]
-    public void Winter_Equals_3() => Seasons.Winter.Should().HaveValue(3);
+    public void Winter_Equals_55() => Seasons.Winter.Should().HaveValue(55);
 }
