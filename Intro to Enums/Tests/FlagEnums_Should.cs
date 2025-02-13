@@ -16,4 +16,19 @@ public class FlagEnums_Should
         // Checks if the [Flags] attribute is set on the enum
         typeof(FileOperations).GetCustomAttributes<FlagsAttribute>().Any().Should().BeTrue();
     }
+
+    [Fact]
+    public void FileOperations_Has_Correct_Values()
+    {
+        // Given
+    
+        // When
+    
+        // Then
+        FileOperations.None.Should().HaveValue(0);
+        FileOperations.ReadOnly.Should().HaveValue(1);
+        FileOperations.Hidden.Should().HaveValue(2);
+        FileOperations.Compressed.Should().HaveValue(4);
+        FileOperations.Encrypted.Should().HaveValue(8);
+    }
 }
